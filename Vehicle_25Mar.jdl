@@ -1,0 +1,224 @@
+application {
+  config {
+    baseName prospectService
+    applicationType gateway
+    packageName ai.maxdrive.vehicle.service
+    authenticationType jwt
+    prodDatabaseType postgresql
+    clientFramework react
+    databaseType sql
+    serverPort 8080
+    devDatabaseType postgresql
+    dtoSuffix DTO
+    enableSwaggerCodegen true
+    entitySuffix Entity
+    languages [en, fr]
+    messageBroker kafka
+    nativeLanguage en
+    prodDatabaseType postgresql
+    serviceDiscoveryType eureka
+    testFrameworks [protractor, cucumber, gatling]
+  }
+  entities *
+}
+
+enum MovementType{ ENTRY, EXIT }
+enum VehicleMovementChecklistStatus { RETRIEVED, WITHCHAMPION }
+
+entity SimNetwork{
+	code String required,
+    displayName String required,
+    description String
+}
+
+/** This stores 2 wheeler, 3 wheeler, 4 wheeler etc as a value*/
+entity AssestClass{
+	code String required,
+    displayName String required,
+    /** This identifies whether to show it in our application or not.*/
+    isDisplayOn Boolean required,
+    description String
+}
+
+/** This stores Motorcycle,Tricycle,Car,Minibus,eMotorcycle,eTricycle,Van etc*/
+entity VehicleType{
+	code String required,
+    displayName String required,
+    /** This identifies whether to show it in our application or not.*/
+    isDisplayOn Boolean required,
+    description String
+}
+
+entity VehicleManufacturer{
+	code String required,
+    displayName String required,
+    /** This identifies whether to show it in our application or not.*/
+    isDisplayOn Boolean required,
+    description String
+}
+
+entity VehicleModel{
+	code String required,
+    displayName String required,
+    /** This identifies whether to show it in our application or not.*/
+    isDisplayOn Boolean required,
+    modelYear LocalDate,
+    description String
+}
+
+entity VehicleTrim{
+	/** unique human readable name.*/
+	code String required,
+    /** This stores the name that will be shown in the UI*/
+    displayName String required,
+    /** This identifies whether to show it in our application or not.*/
+    isDisplayOn Boolean required,
+    description String
+}
+
+entity VehicleStatus{
+	/** unique human readable name.*/
+	code String required,
+    /** This stores the name that will be shown in the UI*/
+    displayName String required,
+    description String
+}
+
+/** Create relationship to VehicleStatus.*/
+entity VehicleStatusChangeReason{
+	/** unique human readable name.*/
+	code String required,
+    /** This stores the name that will be shown in the UI*/
+    displayName String required,
+    description String
+}
+
+/** Create relationship to VehicleStatusChangeReason.*/
+entity VehicleStatChangeSubReason{
+	/** unique human readable name. Such as pulsar_xvi */
+	code String required,
+    /** This stores the name that will be shown in the UI*/
+    displayName String required,
+    description String
+}
+
+/** Rework might be needed. Relationship - hPV*/
+entity Vehicle {
+	/** Unique system generated user readable value. E.g. MAX-VH-IB-123*/
+	maxVehicleId String required,
+    /**Shared resource: From config service*/
+    subCityId String required,
+    chassisNumber String required,
+    ignitionNumber String required,
+    engineNumber String required,
+    vehicleColor String required,
+    oemVendorName String required,
+    receiver String required,
+    /**Shared resource: From config service. Mandatory value once vehicle is ready to be assigned. */
+    serviceTypeCode String,
+    /**Shared resource: From account service. Mandatory value once vehicle is ready to be assigned.*/
+    partnerCode String,
+    /**Shared resource: From config service. Mandatory value once vehicle is ready to be assigned.*/
+    platformCode String,
+    /**Mandatory value once vehicle is ready to be assigned.*/
+    plateNumber String,
+    /**Mandatory value once vehicle is ready to be assigned.*/
+    licenseExpirationDate LocalDate,
+    /**Mandatory value once vehicle is priced.*/
+    pricingTemplateId String,
+     /**Mandatory value once vehicle is ready to be assigned.*/
+    deviceImei String,
+    /**Mandatory value once vehicle is ready to be assigned.*/
+	simSerialNumber	String,
+    /**Mandatory value once vehicle is ready to be assigned. Tracker Sim no*/
+    devicePhone String,
+    /** Usecase and value source unknown*/
+    batchId Integer,
+    /** Usecase and value source unknown*/
+   	isMaxVehicle Boolean,
+    /** Usecase and value source unknown*/
+    maxGlobalId String
+}
+
+/** Master table to hold all checklist items for a vehicle*/
+entity VehicleChecklistItem {
+	/** unique human readable name. Such as helmet */
+	code String required,
+    /** This stores the name that will be shown in the UI*/
+    displayName String required,
+    description String
+}
+
+/** Relationship - Vehicle, VehicleStatChangeSubReason*/
+entity VehicleMovement {
+	/**Current location field from UI */
+    sourceSubCityId String required,
+    destinationSubCityId String,
+    /** This field identifies whether vehicle is checked-in (Entry) or checkout out (Exit)*/
+    movementType MovementType required,
+    retrievalAgentMaxId String required, 
+    /** Odomoter reading when at source*/
+    odometerReadingOutward Double required,
+    /** Odomoter reading when received at destination*/
+    odometerReadingInward Double
+}
+
+/** Relationship - VehicleMovement, VehicleChecklistItem. This table stores the items given to champion while checking out vehicle. It also manages the status, if item is retrieved or still with the champion*/
+entity VehicleMovementChecklist {
+	itemStatus VehicleMovementChecklistStatus required
+}
+
+/**Relationship - Vehicle, VehicleMovement, VehicleStatChangeSubReason. History table for VehicleMovement. Only trigger need to be created on VehicleMovement to insert here*/
+entity VehicleMovementHistory {
+	/**Current location field from UI */
+    sourceSubCityId String required,
+    destinationSubCityId String,
+    /** This field identifies whether vehicle is checked-in (Entry) or checkout out (Exit)*/
+    movementType MovementType required,
+    retrivalAgentMaxId String required, 
+    /** Odomoter reading when at source*/
+    odometerReadingOutward Double required,
+    /** Odomoter reading when received at destination*/
+    odometerReadingInward Double
+}
+
+/** Relationship - VehicleMovement, VehicleChecklist, VehicleMovementChecklist. History table for VehicleMovementChecklist. Only trigger need to be created on VehicleMovementChecklist to insert here*/
+entity VehicleMovementCheckHist {
+	itemStatus VehicleMovementChecklistStatus required
+}
+
+relationship OneToMany {
+    AssestClass{vehicleTypes} to VehicleType{assestClass},
+    VehicleManufacturer{vehicleModels} to VehicleModel{vehicleManufacturer},
+    VehicleType{vehicleModels} to VehicleModel{vehicleType},
+    VehicleModel{vehicleTrims} to VehicleTrim{vehicleModel},
+    VehicleStatus{vehicleStatusChangeReasons} to VehicleStatusChangeReason{vehicleStatus},
+    VehicleStatusChangeReason{VehicleStatChangeSubReasons} to VehicleStatChangeSubReason{vehicleStatusChangeReason},
+    VehicleTrim{vehicles} to Vehicle{vehicleTrim},
+    VehicleStatus{vehicles} to Vehicle{vehicleStatus},
+    VehicleMovement{vehicleMovementChecklists} to VehicleMovementChecklist{vehicleMovement},
+    VehicleMovementHistory{vehicleMovementChecklists} to VehicleMovementChecklist{vehicleMovementHistory},
+    VehicleMovement{vehicleMovementHistories} to VehicleMovementHistory{vehicleMovement}
+}
+
+relationship OneToOne {
+ 	Vehicle{vehicleMovement} to VehicleMovement{vehicle},
+ 	VehicleMovement{vehicle} to Vehicle{vehicleMovement},
+ 	Vehicle{vehicleMovementHistory} to VehicleMovementHistory{vehicle},
+ 	VehicleMovementHistory{vehicle} to Vehicle{vehicleMovementHistory}
+}
+
+//relationship ManyToOne {
+	//VehicleType{assestClass} to AssestClass,
+    //VehicleModel{vehicleType} to VehicleType,
+    //VehicleModel{vehicleManufacturer} to VehicleManufacturer,
+    //VehicleTrim{vehicleModel} to VehicleModel,
+    //Vehicle{vehicleTrim} to VehicleTrim,
+    //Vehicle{simNetwork} to SimNetwork,
+    //Vehicle{vehicleStatus} to VehicleStatus,
+    //VehicleMovement{VehicleStatChangeSubReason} to VehicleStatChangeSubReason,
+    //VehicleMovementChecklist{vehicleChecklistItem} to VehicleChecklistItem,
+    //VehicleMovementHistory{VehicleStatChangeSubReason} to VehicleStatChangeSubReason,
+    //VehicleMovementCheckHist{vehicleChecklistItem} to VehicleChecklistItem
+//}
+

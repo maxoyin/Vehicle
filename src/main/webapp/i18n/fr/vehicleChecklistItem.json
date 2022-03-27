@@ -1,0 +1,30 @@
+{
+  "prospectServiceApp": {
+    "vehicleChecklistItem": {
+      "home": {
+        "title": "VehicleChecklistItems",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Vehicle Checklist Item",
+        "createOrEditLabel": "Créer ou éditer un Vehicle Checklist Item",
+        "notFound": "Aucun Vehicle Checklist Item trouvé"
+      },
+      "created": "Un nouveau Vehicle Checklist Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Vehicle Checklist Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Vehicle Checklist Item avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Vehicle Checklist Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Vehicle Checklist Item"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "description": "Description",
+      "help": {
+        "code": "unique human readable name. Such as helmet",
+        "displayName": "This stores the name that will be shown in the UI"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "prospectServiceApp": {
+    "vehicle": {
+      "home": {
+        "title": "Vehicles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle",
+        "createOrEditLabel": "Create or edit a Vehicle",
+        "notFound": "No Vehicles found"
+      },
+      "created": "A new Vehicle is created with identifier {{ param }}",
+      "updated": "A Vehicle is updated with identifier {{ param }}",
+      "deleted": "A Vehicle is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle"
+      },
+      "id": "ID",
+      "maxVehicleId": "Max Vehicle Id",
+      "subCityId": "Sub City Id",
+      "chassisNumber": "Chassis Number",
+      "ignitionNumber": "Ignition Number",
+      "engineNumber": "Engine Number",
+      "vehicleColor": "Vehicle Color",
+      "oemVendorName": "Oem Vendor Name",
+      "receiver": "Receiver",
+      "serviceTypeCode": "Service Type Code",
+      "partnerCode": "Partner Code",
+      "platformCode": "Platform Code",
+      "plateNumber": "Plate Number",
+      "licenseExpirationDate": "License Expiration Date",
+      "pricingTemplateId": "Pricing Template Id",
+      "deviceImei": "Device Imei",
+      "simSerialNumber": "Sim Serial Number",
+      "devicePhone": "Device Phone",
+      "batchId": "Batch Id",
+      "isMaxVehicle": "Is Max Vehicle",
+      "maxGlobalId": "Max Global Id",
+      "vehicleMovement": "Vehicle Movement",
+      "vehicleMovementHistory": "Vehicle Movement History",
+      "vehicleMovement": "Vehicle Movement",
+      "vehicleMovementHistory": "Vehicle Movement History",
+      "vehicleTrim": "Vehicle Trim",
+      "vehicleStatus": "Vehicle Status",
+      "help": {
+        "maxVehicleId": "Unique system generated user readable value. E.g. MAX-VH-IB-123",
+        "subCityId": "Shared resource: From config service",
+        "serviceTypeCode": "Shared resource: From config service. Mandatory value once vehicle is ready to be assigned.",
+        "partnerCode": "Shared resource: From account service. Mandatory value once vehicle is ready to be assigned.",
+        "platformCode": "Shared resource: From config service. Mandatory value once vehicle is ready to be assigned.",
+        "plateNumber": "Mandatory value once vehicle is ready to be assigned.",
+        "licenseExpirationDate": "Mandatory value once vehicle is ready to be assigned.",
+        "pricingTemplateId": "Mandatory value once vehicle is priced.",
+        "deviceImei": "Mandatory value once vehicle is ready to be assigned.",
+        "simSerialNumber": "Mandatory value once vehicle is ready to be assigned.",
+        "devicePhone": "Mandatory value once vehicle is ready to be assigned. Tracker Sim no",
+        "batchId": "Usecase and value source unknown",
+        "isMaxVehicle": "Usecase and value source unknown",
+        "maxGlobalId": "Usecase and value source unknown"
+      }
+    }
+  }
+}

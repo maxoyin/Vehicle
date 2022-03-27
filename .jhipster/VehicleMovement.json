@@ -1,0 +1,78 @@
+{
+  "name": "VehicleMovement",
+  "fields": [
+    {
+      "fieldName": "sourceSubCityId",
+      "fieldType": "String",
+      "javadoc": "Current location field from UI",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "destinationSubCityId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "movementType",
+      "fieldType": "MovementType",
+      "javadoc": "This field identifies whether vehicle is checked-in (Entry) or checkout out (Exit)",
+      "fieldValues": "ENTRY,EXIT",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "retrievalAgentMaxId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "odometerReadingOutward",
+      "fieldType": "Double",
+      "javadoc": "Odomoter reading when at source",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "odometerReadingInward",
+      "fieldType": "Double",
+      "javadoc": "Odomoter reading when received at destination"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleMovement",
+      "relationshipName": "vehicle",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleMovementChecklist",
+      "otherEntityRelationshipName": "vehicleMovement",
+      "relationshipName": "vehicleMovementChecklists"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleMovementHistory",
+      "otherEntityRelationshipName": "vehicleMovement",
+      "relationshipName": "vehicleMovementHistories"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleMovement",
+      "relationshipName": "vehicle",
+      "ownerSide": false
+    }
+  ],
+  "javadoc": "Relationship - Vehicle, VehicleStatChangeSubReason",
+  "entityTableName": "vehicle_movement",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091609"
+}

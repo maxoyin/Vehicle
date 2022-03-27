@@ -1,0 +1,78 @@
+{
+  "name": "VehicleMovementHistory",
+  "fields": [
+    {
+      "fieldName": "sourceSubCityId",
+      "fieldType": "String",
+      "javadoc": "Current location field from UI",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "destinationSubCityId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "movementType",
+      "fieldType": "MovementType",
+      "javadoc": "This field identifies whether vehicle is checked-in (Entry) or checkout out (Exit)",
+      "fieldValues": "ENTRY,EXIT",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "retrivalAgentMaxId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "odometerReadingOutward",
+      "fieldType": "Double",
+      "javadoc": "Odomoter reading when at source",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "odometerReadingInward",
+      "fieldType": "Double",
+      "javadoc": "Odomoter reading when received at destination"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleMovementHistory",
+      "relationshipName": "vehicle",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleMovementChecklist",
+      "otherEntityRelationshipName": "vehicleMovementHistory",
+      "relationshipName": "vehicleMovementChecklists"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleMovementHistory",
+      "relationshipName": "vehicle",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleMovement",
+      "otherEntityRelationshipName": "vehicleMovementHistories",
+      "relationshipName": "vehicleMovement"
+    }
+  ],
+  "javadoc": "Relationship - Vehicle, VehicleMovement, VehicleStatChangeSubReason. History table for VehicleMovement. Only trigger need to be created on VehicleMovement to insert here",
+  "entityTableName": "vehicle_movement_history",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091809"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "AssestClass",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isDisplayOn",
+      "fieldType": "Boolean",
+      "javadoc": "This identifies whether to show it in our application or not.",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleType",
+      "otherEntityRelationshipName": "assestClass",
+      "relationshipName": "vehicleTypes"
+    }
+  ],
+  "javadoc": "This stores 2 wheeler, 3 wheeler, 4 wheeler etc as a value",
+  "entityTableName": "assest_class",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327090609"
+}

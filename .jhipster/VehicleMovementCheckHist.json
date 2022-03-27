@@ -1,0 +1,24 @@
+{
+  "name": "VehicleMovementCheckHist",
+  "fields": [
+    {
+      "fieldName": "itemStatus",
+      "fieldType": "VehicleMovementChecklistStatus",
+      "fieldValues": "RETRIEVED,WITHCHAMPION",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "javadoc": "Relationship - VehicleMovement, VehicleChecklist, VehicleMovementChecklist. History table for VehicleMovementChecklist. Only trigger need to be created on VehicleMovementChecklist to insert here",
+  "entityTableName": "vehicle_movement_check_hist",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091909"
+}

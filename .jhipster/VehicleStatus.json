@@ -1,0 +1,46 @@
+{
+  "name": "VehicleStatus",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "javadoc": "unique human readable name.",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "javadoc": "This stores the name that will be shown in the UI",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleStatusChangeReason",
+      "otherEntityRelationshipName": "vehicleStatus",
+      "relationshipName": "vehicleStatusChangeReasons"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleStatus",
+      "relationshipName": "vehicles"
+    }
+  ],
+  "entityTableName": "vehicle_status",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091109"
+}

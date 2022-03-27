@@ -1,0 +1,24 @@
+{
+  "prospectServiceApp": {
+    "vehicleMovementCheckHist": {
+      "home": {
+        "title": "VehicleMovementCheckHists",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Vehicle Movement Check Hist",
+        "createOrEditLabel": "Créer ou éditer un Vehicle Movement Check Hist",
+        "notFound": "Aucun Vehicle Movement Check Hist trouvé"
+      },
+      "created": "Un nouveau Vehicle Movement Check Hist a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Vehicle Movement Check Hist avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Vehicle Movement Check Hist avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Vehicle Movement Check Hist {{ id }} ?"
+      },
+      "detail": {
+        "title": "Vehicle Movement Check Hist"
+      },
+      "id": "ID",
+      "itemStatus": "Item Status"
+    }
+  }
+}

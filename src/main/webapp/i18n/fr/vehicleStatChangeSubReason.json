@@ -1,0 +1,31 @@
+{
+  "prospectServiceApp": {
+    "vehicleStatChangeSubReason": {
+      "home": {
+        "title": "VehicleStatChangeSubReasons",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Vehicle Stat Change Sub Reason",
+        "createOrEditLabel": "Créer ou éditer un Vehicle Stat Change Sub Reason",
+        "notFound": "Aucun Vehicle Stat Change Sub Reason trouvé"
+      },
+      "created": "Un nouveau Vehicle Stat Change Sub Reason a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Vehicle Stat Change Sub Reason avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Vehicle Stat Change Sub Reason avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Vehicle Stat Change Sub Reason {{ id }} ?"
+      },
+      "detail": {
+        "title": "Vehicle Stat Change Sub Reason"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "description": "Description",
+      "vehicleStatusChangeReason": "Vehicle Status Change Reason",
+      "help": {
+        "code": "unique human readable name. Such as pulsar_xvi",
+        "displayName": "This stores the name that will be shown in the UI"
+      }
+    }
+  }
+}

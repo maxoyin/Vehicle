@@ -1,0 +1,31 @@
+{
+  "prospectServiceApp": {
+    "assestClass": {
+      "home": {
+        "title": "AssestClasses",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Assest Class",
+        "createOrEditLabel": "Créer ou éditer un Assest Class",
+        "notFound": "Aucun Assest Class trouvé"
+      },
+      "created": "Un nouveau Assest Class a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Assest Class avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Assest Class avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Assest Class {{ id }} ?"
+      },
+      "detail": {
+        "title": "Assest Class"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "isDisplayOn": "Is Display On",
+      "description": "Description",
+      "vehicleTypes": "Vehicle Types",
+      "help": {
+        "isDisplayOn": "This identifies whether to show it in our application or not."
+      }
+    }
+  }
+}

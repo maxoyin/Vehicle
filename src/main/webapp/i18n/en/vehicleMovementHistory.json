@@ -1,0 +1,39 @@
+{
+  "prospectServiceApp": {
+    "vehicleMovementHistory": {
+      "home": {
+        "title": "Vehicle Movement Histories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Movement History",
+        "createOrEditLabel": "Create or edit a Vehicle Movement History",
+        "notFound": "No Vehicle Movement Histories found"
+      },
+      "created": "A new Vehicle Movement History is created with identifier {{ param }}",
+      "updated": "A Vehicle Movement History is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Movement History is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Movement History {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Movement History"
+      },
+      "id": "ID",
+      "sourceSubCityId": "Source Sub City Id",
+      "destinationSubCityId": "Destination Sub City Id",
+      "movementType": "Movement Type",
+      "retrivalAgentMaxId": "Retrival Agent Max Id",
+      "odometerReadingOutward": "Odometer Reading Outward",
+      "odometerReadingInward": "Odometer Reading Inward",
+      "vehicle": "Vehicle",
+      "vehicleMovementChecklists": "Vehicle Movement Checklists",
+      "vehicle": "Vehicle",
+      "vehicleMovement": "Vehicle Movement",
+      "help": {
+        "sourceSubCityId": "Current location field from UI",
+        "movementType": "This field identifies whether vehicle is checked-in (Entry) or checkout out (Exit)",
+        "odometerReadingOutward": "Odomoter reading when at source",
+        "odometerReadingInward": "Odomoter reading when received at destination"
+      }
+    }
+  }
+}

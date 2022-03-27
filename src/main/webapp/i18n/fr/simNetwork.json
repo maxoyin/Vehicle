@@ -1,0 +1,26 @@
+{
+  "prospectServiceApp": {
+    "simNetwork": {
+      "home": {
+        "title": "SimNetworks",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Sim Network",
+        "createOrEditLabel": "Créer ou éditer un Sim Network",
+        "notFound": "Aucun Sim Network trouvé"
+      },
+      "created": "Un nouveau Sim Network a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Sim Network avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Sim Network avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Sim Network {{ id }} ?"
+      },
+      "detail": {
+        "title": "Sim Network"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "description": "Description"
+    }
+  }
+}

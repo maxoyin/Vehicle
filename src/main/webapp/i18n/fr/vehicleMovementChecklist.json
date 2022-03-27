@@ -1,0 +1,26 @@
+{
+  "prospectServiceApp": {
+    "vehicleMovementChecklist": {
+      "home": {
+        "title": "VehicleMovementChecklists",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Vehicle Movement Checklist",
+        "createOrEditLabel": "Créer ou éditer un Vehicle Movement Checklist",
+        "notFound": "Aucun Vehicle Movement Checklist trouvé"
+      },
+      "created": "Un nouveau Vehicle Movement Checklist a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Vehicle Movement Checklist avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Vehicle Movement Checklist avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Vehicle Movement Checklist {{ id }} ?"
+      },
+      "detail": {
+        "title": "Vehicle Movement Checklist"
+      },
+      "id": "ID",
+      "itemStatus": "Item Status",
+      "vehicleMovement": "Vehicle Movement",
+      "vehicleMovementHistory": "Vehicle Movement History"
+    }
+  }
+}

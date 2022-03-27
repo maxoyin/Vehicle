@@ -1,0 +1,34 @@
+{
+  "prospectServiceApp": {
+    "vehicleTrim": {
+      "home": {
+        "title": "Vehicle Trims",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Trim",
+        "createOrEditLabel": "Create or edit a Vehicle Trim",
+        "notFound": "No Vehicle Trims found"
+      },
+      "created": "A new Vehicle Trim is created with identifier {{ param }}",
+      "updated": "A Vehicle Trim is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Trim is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Trim {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Trim"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "isDisplayOn": "Is Display On",
+      "description": "Description",
+      "vehicles": "Vehicles",
+      "vehicleModel": "Vehicle Model",
+      "help": {
+        "code": "unique human readable name.",
+        "displayName": "This stores the name that will be shown in the UI",
+        "isDisplayOn": "This identifies whether to show it in our application or not."
+      }
+    }
+  }
+}

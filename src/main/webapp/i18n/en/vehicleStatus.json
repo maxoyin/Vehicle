@@ -1,0 +1,32 @@
+{
+  "prospectServiceApp": {
+    "vehicleStatus": {
+      "home": {
+        "title": "Vehicle Statuses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Status",
+        "createOrEditLabel": "Create or edit a Vehicle Status",
+        "notFound": "No Vehicle Statuses found"
+      },
+      "created": "A new Vehicle Status is created with identifier {{ param }}",
+      "updated": "A Vehicle Status is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Status is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Status {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Status"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "description": "Description",
+      "vehicleStatusChangeReasons": "Vehicle Status Change Reasons",
+      "vehicles": "Vehicles",
+      "help": {
+        "code": "unique human readable name.",
+        "displayName": "This stores the name that will be shown in the UI"
+      }
+    }
+  }
+}

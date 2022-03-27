@@ -1,0 +1,34 @@
+{
+  "prospectServiceApp": {
+    "vehicleModel": {
+      "home": {
+        "title": "VehicleModels",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Vehicle Model",
+        "createOrEditLabel": "Créer ou éditer un Vehicle Model",
+        "notFound": "Aucun Vehicle Model trouvé"
+      },
+      "created": "Un nouveau Vehicle Model a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Vehicle Model avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Vehicle Model avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Vehicle Model {{ id }} ?"
+      },
+      "detail": {
+        "title": "Vehicle Model"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "isDisplayOn": "Is Display On",
+      "modelYear": "Model Year",
+      "description": "Description",
+      "vehicleTrims": "Vehicle Trims",
+      "vehicleManufacturer": "Vehicle Manufacturer",
+      "vehicleType": "Vehicle Type",
+      "help": {
+        "isDisplayOn": "This identifies whether to show it in our application or not."
+      }
+    }
+  }
+}

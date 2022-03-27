@@ -1,0 +1,73 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "clientFramework": "react",
+    "serverPort": "8080",
+    "serviceDiscoveryType": "eureka",
+    "skipUserManagement": false,
+    "withAdminUi": true,
+    "baseName": "prospectService",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "sqlite",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en", "fr"],
+    "messageBroker": "kafka",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "skipClient": false,
+    "testFrameworks": ["protractor", "cucumber", "gatling"],
+    "websocket": false,
+    "applicationType": "gateway",
+    "packageName": "com.jhipster.node",
+    "packageFolder": "ai/maxdrive/vehicle/service",
+    "dtoSuffix": "DTO",
+    "entitySuffix": "Entity",
+    "nativeLanguage": "en",
+    "jhipsterVersion": "7.0.1",
+    "skipServer": false,
+    "clientPackageManager": "npm",
+    "reactive": true,
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "entities": [
+      "SimNetwork",
+      "AssestClass",
+      "VehicleType",
+      "VehicleManufacturer",
+      "VehicleModel",
+      "VehicleTrim",
+      "VehicleStatus",
+      "VehicleStatusChangeReason",
+      "VehicleStatChangeSubReason",
+      "Vehicle",
+      "VehicleChecklistItem",
+      "VehicleMovement",
+      "VehicleMovementChecklist",
+      "VehicleMovementHistory",
+      "VehicleMovementCheckHist"
+    ],
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "2.0.0"
+      }
+    ],
+    "pages": [],
+    "creationTimestamp": 1648371849817,
+    "jwtSecretKey": "NmJhMTVkZTM4MTg5OTA5NGQ0MGZjNWY0MGJmYzBlNjMyMmJhZTZiN2Y0ZWI1MTMwMGMwMzdjNWNiMjJmMjAxZjJjODQ2M2EyYzczNTM3YjIyZTE1YmIwMDRiNTQ1MWU3ZTRiNDFhYmFiNGUzYmUwNWYwMDNhN2JmZTM4ODQyNjE=",
+    "lastLiquibaseTimestamp": 1648372749000
+  }
+}

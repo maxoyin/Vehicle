@@ -1,0 +1,31 @@
+{
+  "prospectServiceApp": {
+    "vehicleStatChangeSubReason": {
+      "home": {
+        "title": "Vehicle Stat Change Sub Reasons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Stat Change Sub Reason",
+        "createOrEditLabel": "Create or edit a Vehicle Stat Change Sub Reason",
+        "notFound": "No Vehicle Stat Change Sub Reasons found"
+      },
+      "created": "A new Vehicle Stat Change Sub Reason is created with identifier {{ param }}",
+      "updated": "A Vehicle Stat Change Sub Reason is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Stat Change Sub Reason is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Stat Change Sub Reason {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Stat Change Sub Reason"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name",
+      "description": "Description",
+      "vehicleStatusChangeReason": "Vehicle Status Change Reason",
+      "help": {
+        "code": "unique human readable name. Such as pulsar_xvi",
+        "displayName": "This stores the name that will be shown in the UI"
+      }
+    }
+  }
+}

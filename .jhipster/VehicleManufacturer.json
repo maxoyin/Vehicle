@@ -1,0 +1,44 @@
+{
+  "name": "VehicleManufacturer",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isDisplayOn",
+      "fieldType": "Boolean",
+      "javadoc": "This identifies whether to show it in our application or not.",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleModel",
+      "otherEntityRelationshipName": "vehicleManufacturer",
+      "relationshipName": "vehicleModels"
+    }
+  ],
+  "entityTableName": "vehicle_manufacturer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327090809"
+}

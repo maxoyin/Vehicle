@@ -1,0 +1,9 @@
+{
+  "prospectServiceApp": {
+    "VehicleMovementChecklistStatus": {
+      "null": "",
+      "RETRIEVED": "RETRIEVED",
+      "WITHCHAMPION": "WITHCHAMPION"
+    }
+  }
+}

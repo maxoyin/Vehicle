@@ -1,0 +1,37 @@
+{
+  "name": "VehicleMovementChecklist",
+  "fields": [
+    {
+      "fieldName": "itemStatus",
+      "fieldType": "VehicleMovementChecklistStatus",
+      "fieldValues": "RETRIEVED,WITHCHAMPION",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleMovement",
+      "otherEntityRelationshipName": "vehicleMovementChecklists",
+      "relationshipName": "vehicleMovement"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleMovementHistory",
+      "otherEntityRelationshipName": "vehicleMovementChecklists",
+      "relationshipName": "vehicleMovementHistory"
+    }
+  ],
+  "javadoc": "Relationship - VehicleMovement, VehicleChecklistItem. This table stores the items given to champion while checking out vehicle. It also manages the status, if item is retrieved or still with the champion",
+  "entityTableName": "vehicle_movement_checklist",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091709"
+}

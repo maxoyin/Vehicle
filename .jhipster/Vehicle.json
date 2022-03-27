@@ -1,0 +1,161 @@
+{
+  "name": "Vehicle",
+  "fields": [
+    {
+      "fieldName": "maxVehicleId",
+      "fieldType": "String",
+      "javadoc": "Unique system generated user readable value. E.g. MAX-VH-IB-123",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subCityId",
+      "fieldType": "String",
+      "javadoc": "Shared resource: From config service",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "chassisNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ignitionNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "engineNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vehicleColor",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "oemVendorName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "receiver",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "serviceTypeCode",
+      "fieldType": "String",
+      "javadoc": "Shared resource: From config service. Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "partnerCode",
+      "fieldType": "String",
+      "javadoc": "Shared resource: From account service. Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "platformCode",
+      "fieldType": "String",
+      "javadoc": "Shared resource: From config service. Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "plateNumber",
+      "fieldType": "String",
+      "javadoc": "Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "licenseExpirationDate",
+      "fieldType": "LocalDate",
+      "javadoc": "Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "pricingTemplateId",
+      "fieldType": "String",
+      "javadoc": "Mandatory value once vehicle is priced."
+    },
+    {
+      "fieldName": "deviceImei",
+      "fieldType": "String",
+      "javadoc": "Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "simSerialNumber",
+      "fieldType": "String",
+      "javadoc": "Mandatory value once vehicle is ready to be assigned."
+    },
+    {
+      "fieldName": "devicePhone",
+      "fieldType": "String",
+      "javadoc": "Mandatory value once vehicle is ready to be assigned. Tracker Sim no"
+    },
+    {
+      "fieldName": "batchId",
+      "fieldType": "Integer",
+      "javadoc": "Usecase and value source unknown"
+    },
+    {
+      "fieldName": "isMaxVehicle",
+      "fieldType": "Boolean",
+      "javadoc": "Usecase and value source unknown"
+    },
+    {
+      "fieldName": "maxGlobalId",
+      "fieldType": "String",
+      "javadoc": "Usecase and value source unknown"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicleMovement",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "vehicleMovement",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicleMovementHistory",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "vehicleMovementHistory",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicleMovement",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "vehicleMovement",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "vehicleMovementHistory",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "vehicleMovementHistory",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleTrim",
+      "otherEntityRelationshipName": "vehicles",
+      "relationshipName": "vehicleTrim"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleStatus",
+      "otherEntityRelationshipName": "vehicles",
+      "relationshipName": "vehicleStatus"
+    }
+  ],
+  "javadoc": "Rework might be needed. Relationship - hPV",
+  "entityTableName": "vehicle",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327091409"
+}

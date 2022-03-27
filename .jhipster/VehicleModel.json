@@ -1,0 +1,60 @@
+{
+  "name": "VehicleModel",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isDisplayOn",
+      "fieldType": "Boolean",
+      "javadoc": "This identifies whether to show it in our application or not.",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "modelYear",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleTrim",
+      "otherEntityRelationshipName": "vehicleModel",
+      "relationshipName": "vehicleTrims"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleManufacturer",
+      "otherEntityRelationshipName": "vehicleModels",
+      "relationshipName": "vehicleManufacturer"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "vehicleType",
+      "otherEntityRelationshipName": "vehicleModels",
+      "relationshipName": "vehicleType"
+    }
+  ],
+  "entityTableName": "vehicle_model",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327090909"
+}

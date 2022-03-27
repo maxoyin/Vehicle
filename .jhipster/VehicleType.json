@@ -1,0 +1,51 @@
+{
+  "name": "VehicleType",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "displayName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isDisplayOn",
+      "fieldType": "Boolean",
+      "javadoc": "This identifies whether to show it in our application or not.",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vehicleModel",
+      "otherEntityRelationshipName": "vehicleType",
+      "relationshipName": "vehicleModels"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "assestClass",
+      "otherEntityRelationshipName": "vehicleTypes",
+      "relationshipName": "assestClass"
+    }
+  ],
+  "javadoc": "This stores Motorcycle,Tricycle,Car,Minibus,eMotorcycle,eTricycle,Van etc",
+  "entityTableName": "vehicle_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["prospectService"],
+  "databaseType": "sql",
+  "changelogDate": "20220327090709"
+}

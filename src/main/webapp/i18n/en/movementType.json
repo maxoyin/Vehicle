@@ -1,0 +1,9 @@
+{
+  "prospectServiceApp": {
+    "MovementType": {
+      "null": "",
+      "ENTRY": "ENTRY",
+      "EXIT": "EXIT"
+    }
+  }
+}
