@@ -19,6 +19,7 @@ import { VehicleMovementModule } from './module/vehicle-movement.module';
 import { VehicleMovementChecklistModule } from './module/vehicle-movement-checklist.module';
 import { VehicleMovementHistoryModule } from './module/vehicle-movement-history.module';
 import { VehicleMovementCheckHistModule } from './module/vehicle-movement-check-hist.module';
+import { KafkaModule } from './module/kafka.module';
 // jhipster-needle-add-entity-module-to-main-import - JHipster will import entity modules here, do not remove
 // jhipster-needle-add-controller-module-to-main-import - JHipster will import controller modules here, do not remove
 // jhipster-needle-add-service-module-to-main-import - JHipster will import service modules here, do not remove
@@ -45,6 +46,7 @@ import { VehicleMovementCheckHistModule } from './module/vehicle-movement-check-
     VehicleMovementChecklistModule,
     VehicleMovementHistoryModule,
     VehicleMovementCheckHistModule,
+    KafkaModule
     // jhipster-needle-add-entity-module-to-main - JHipster will add entity modules here, do not remove
   ],
   controllers: [

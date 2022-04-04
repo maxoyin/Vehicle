@@ -19,6 +19,9 @@ npm-debug.log.*
 # Node Server NestJS
 ######################
 server/dist
+server/package-lock.json
+server/.env
+*.env
 
 ######################
 # SASS
